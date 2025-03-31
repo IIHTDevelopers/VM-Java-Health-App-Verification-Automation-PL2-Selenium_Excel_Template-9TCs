@@ -68,17 +68,15 @@ public class verification_testcase extends AppTestBase {
 					+ "	+ \"1. Click on the Verification Module drop-down arrow\\n\"\r\n" + "	+ \"2. Click on Order")
 
 	public void verifyVerificationSubModules() {
-		try {
+		
 			verification_pageInstance = new verification_page(driver);
 
 			Assert.assertTrue(verification_pageInstance.verifyVerificationSubModules(
-					locatorsFactoryInstance.getPageBarFixedLocator("Inventory")));
+					locatorsFactoryInstance.getPageBarFixedLocator("Inventory")),"Inventory tab is not present");
 
 			Assert.assertTrue(verification_pageInstance.verifyVerificationSubModules(
-					locatorsFactoryInstance.getPageBarFixedLocator("Pharmacy")));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+					locatorsFactoryInstance.getPageBarFixedLocator("Pharmacy")),"Pharmacy tab is not present");
+			
 	}
 
 	@Test(priority = 3, groups = {
