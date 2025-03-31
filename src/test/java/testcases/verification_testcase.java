@@ -70,6 +70,7 @@ public class verification_testcase extends AppTestBase {
 	public void verifyVerificationSubModules() {
 		
 			verification_pageInstance = new verification_page(driver);
+			locatorsFactoryInstance = new LocatorsFactory(driver);
 
 			Assert.assertTrue(verification_pageInstance.verifyVerificationSubModules(
 					locatorsFactoryInstance.getPageBarFixedLocator("Inventory")),"Inventory tab is not present");
