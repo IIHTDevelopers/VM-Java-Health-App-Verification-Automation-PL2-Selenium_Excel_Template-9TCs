@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class verification_page extends StartupPage {
 	
-	//write the required locators here 
+	//Write locators for all 9 testcases here
 
 	public verification_page(WebDriver driver) {
 		super(driver);
